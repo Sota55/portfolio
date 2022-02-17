@@ -10,12 +10,8 @@
 
 <!-- トップバナー -->
 
-    <div class="top-pic-wrap">
+    <div class="top-pic-wrap js-float-menu-target">
         <div class="top-pic">
-<!--         <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="80%" id="blobSvg">
-        <path id="blob" d="M385.5,342.5Q357,435,258,421.5Q159,408,91.5,329Q24,250,93.5,174.5Q163,99,245.5,107Q328,115,371,182.5Q414,250,385.5,342.5Z" fill="#d1d8e0"></path>
-        </svg>
-        <p class="">ご覧いただきありがとうございます。<br>岩上颯太と申します。<br>最後までご覧いただけると幸いです。</p> -->
             <h1 class="top-title">
             <span>W</span>
             <span>e</span>
