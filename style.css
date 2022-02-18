@@ -48,6 +48,7 @@ header {
   header {
     padding-right: 15px;
     padding-left: 15px;
+    margin-top: -80px;
   }
 }
 header.float-active {
@@ -55,6 +56,11 @@ header.float-active {
   position: fixed;
   height: 60px;
   top: 0%;
+}
+@media screen and (max-width: 414px) {
+  header.float-active {
+  margin-top: initial;
+  }
 }
 header .title {
   font-size: 38px;
@@ -517,8 +523,6 @@ body::after .top-pic-wrap .top-pic #blob {
 }
 .panel-text {
   color: #505050;
-  height: 100%;
-  width: 100%;
 }
 .panel-skill-item-wrap {
   margin-bottom: 40px;
