@@ -93,7 +93,7 @@
         </div>
     </div>
 </section>
-    
+
 <section class="container fadeInUpTrigger" id="skill">
     <h2 class="container-title">
         <span class="sub-title">Skill</span>
@@ -102,7 +102,7 @@
     <div class="container-body">
 
     <?php dynamic_sidebar( 'スキルエリア' ); ?>
-    <div class="panel-wrap"> 
+    <div class="panel-wrap">
         <div class="panel">
             <div class="panel-title">
                 <h2>コーディング</h2>

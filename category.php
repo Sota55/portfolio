@@ -12,17 +12,12 @@
             <p class="main-title">制作物</p>
         </h2>
         <div class="container-body">
-        <div class="panel-wrap portfolio"> 
-            
-        <!-- 記事のループ -->
-        <?php get_template_part('loop'); ?>
-    
-        <?php if (function_exists("pagination")) pagination($wp_query->max_num_pages); ?>
-           
+            <div class="panel-wrap portfolio">
+                <!-- 記事のループ -->
+                <?php get_template_part('loop'); ?>
+                <?php if (function_exists("pagination")) pagination($wp_query->max_num_pages); ?>
+            </div>
         </div>
-        </div>
-
-
     </div>
 </section>
 

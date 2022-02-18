@@ -14,13 +14,12 @@ register_nav_menu('mainmenu', 'メインメニュー');
 // wp_nav_menuのaにclass追加
 function add_additional_class_on_a($classes, $item, $args)
 {
-  if (isset($args->add_a_class)) {
+    if (isset($args->add_a_class)) {
     $classes['class'] = $args->add_a_class;
-  }
-  return $classes;
+}
+    return $classes;
 }
 add_filter('nav_menu_link_attributes', 'add_additional_class_on_a', 1, 3);
-
 
 // ページネーション
 function pagination($pages = '', $range = 2)
@@ -82,7 +81,7 @@ function add_custom_inputbox() {
 function custom_area(){
     global $post;
 
-    echo 'コメント　：<textarea cols="50" rows="5" name="about_msg">'.get_post_meta($post->ID,'about',true).'</textarea><br>';
+    echo 'コメント：<textarea cols="50" rows="5" name="about_msg">'.get_post_meta($post->ID,'about',true).'</textarea><br>';
 }
 
 // 投稿ボタンを押した際のデータ更新と保存
@@ -106,14 +105,14 @@ function save_custom_postdata($post_id){
 
 function add_css_js() {//関数名add_css_js()を作成
 	//CSSの読み込みはここから
-	
+
 	//全てのページにcss/store.cssを読み込み
 	wp_enqueue_style('reset', get_template_directory_uri().'/reset.css');
 	//全てのページにstyle.cssを読み込み
 	wp_enqueue_style('style',get_template_directory_uri().'/style.css' );
 	//全てのページにapp.cssを読み込み
 	wp_enqueue_style('app',get_template_directory_uri().'/js/app.js' );
-	
+
 }
 add_action('wp_enqueue_scripts', 'add_css_js');
 
@@ -139,7 +138,6 @@ function my_widgets_area() {
 
 // ウィジェット自体を作成する
 class my_widgets_item1 extends WP_Widget {
-    
     // 初期化（管理画面で表示するウィジェットの名前を設定する）
     function __construct() {
         $widget_ops = array(
@@ -159,7 +157,7 @@ class my_widgets_item1 extends WP_Widget {
         $title = esc_attr($instance['title']);
         $body = esc_attr($instance['body']);
     ?>
-        <p>タイトル：
+        <p>タイトル:
             <input type="text" class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" value="<?php echo $title; ?>" />
             <label for="<?php echo $this->get_field_id('title'); ?>">
                 <?php echo 'タイトル:'; ?>
@@ -178,7 +176,7 @@ class my_widgets_item1 extends WP_Widget {
         $instance = $old_instance;
         $instance['title'] = strip_tags($new_instance['title']); //php,htmlタグを取り除く
         $instance['body'] = trim($new_instance['body']); //先頭と最後尾の空白を取り除く
-        
+
         return $instance;
     }
     // 管理画面から入力されたウィジェットを画面に表示する処理
@@ -189,7 +187,7 @@ class my_widgets_item1 extends WP_Widget {
         // ウィジェットから入力された情報を取得
         $title = apply_filters( 'widget_title', $instance['title'] );
         $body = apply_filters( 'widget_body', $instance['body'] );
-        
+
         // ウィジェットから入力された情報がある場合、htmlを表示する
         if ( !empty($title ) ) {
             echo $before_title .esc_html( $title ) . $after_title;
@@ -204,6 +202,5 @@ class my_widgets_item1 extends WP_Widget {
                 </section>
                 <?php
             }
-            
         }
 // }

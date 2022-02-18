@@ -1,7 +1,6 @@
 <header class="header js-float-menu container-body">
     <h1 class="title"><a href="<?php echo home_url(); ?>">Sota Iwakami's Portfolio</a></h1>
-    
-        
+
     <div class="menu-trigger js-toggle-sp-menu">
         <span></span>
         <span></span>

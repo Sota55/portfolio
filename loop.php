@@ -15,10 +15,8 @@
 </article>
 
 
-    
     <!-- 記事のループ -->
     <?php endwhile; //endwhile have_post?>
 
     <?php endif; //end have_post?>
-    
 

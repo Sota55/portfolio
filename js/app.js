@@ -20,8 +20,7 @@ $(function() {
         $(window).on('scroll', function() {
             $('.js-float-menu').toggleClass('float-active', $(this).scrollTop() > targetHeight);
         });
-    
-	
+
       function fadeAnime(){
       //fadein-trigger
       $('.fadeInUpTrigger').each(function(){
@@ -35,7 +34,7 @@ $(function() {
         }
       });
       }
-    
+
       // 画面をスクロールをしたら動かしたい場合の記述
       $(window).scroll(function (){
         fadeAnime();/* アニメーション用の関数を呼ぶ*/
@@ -46,6 +45,4 @@ $(function() {
       if( window.innerHeight > $ftr.offset().top + $ftr.outerHeight() ){
         $ftr.attr({'style': 'position:fixed; top:' + (window.innerHeight - $ftr.outerHeight()) +'px;' });
       }
-    
     });
-    

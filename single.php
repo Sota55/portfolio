@@ -21,7 +21,7 @@
                         <?php the_content(); ?>
                     </p>
                 </article>
-                
+
                 <?php endwhile; ?>
 
             <div class="pagination">
@@ -33,8 +33,6 @@
 
 
             <?php endif; //end have_post?>
-            
-
             </div>
 
 
